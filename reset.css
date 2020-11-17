@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap');
+@import url('ttps://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 16px 'Open Sans',sans-serif;
+}
+
+h1,h2,ol,p {
+    margin:0;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+footer {
+    outline: 0;
+}

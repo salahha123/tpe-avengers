@@ -1,0 +1,109 @@
+/*déclaration des variables*/
+:root {
+    --color-default: #ffffff;
+    --color-primary: #222;
+    --color-subtitle: #1695E0;
+    --color-shadow: #1584C5;
+    --color-warning: #FF0000;
+}
+
+/*fond de page fixé et mis à l'échelle*/
+html {
+    background-image:url(../assets/background.png);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+
+
+/*structure principale*/
+body {
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 7px var(--color-primary);
+    max-width: 800px;
+    padding: 10px;
+}
+
+
+
+/*écart du titre avec la page + changement d'alignement et de font*/
+header > h1 {
+    line-height: 90px;
+    margin-bottom: 25px;
+    text-align: center;
+    font: 48px 'Zhi Mang Xing',cursive;
+}
+
+/*liste de navigation*/
+nav > h2, section > h2 {
+    line-height: 45px;
+    background: var(--color-subtitle);
+    padding-left: 5px;
+    box-shadow: 0 3px 0 var(--color-shadow);
+    font-family: 'Zhi Mang Xing', cursive;
+    color: var(--color-default);
+}
+
+
+
+/*écart entre la liste et les titres*/
+nav > ol {
+    margin: 15px 0;
+}
+
+/*écart entre les lignes de la liste*/
+ol > li {
+    line-height: 1.5rem;
+}
+
+/*écart entre p et les titres + écart entre les lignes*/
+section > p {
+    padding: 10px;
+    line-height: 1.5rem;
+    text-align: justify;    
+}
+
+/*pour que l'image s'adapte au bloc*/
+section p img {
+    display: block;
+    width: 100%;
+}
+
+/*pour aligner le footer au centre*/
+footer {
+    text-align: center;
+}
+
+
+
+/*pour coller les unicode*/
+h1::before {
+    content:"\2605";
+    color: var(--color-warning);
+}
+
+h2::after {
+    content:"\003E";
+    margin-left: 5px;
+}
+
+footer::before {
+    content:"\003C \0002F \003E";
+}
+
+
+
+/*pour coller le h2 quand on scroll*/
+nav > h2, section > h2 {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+/*pour colorer entièrement le bouton quand on clique*/
+section .bookmark:target {
+    background:var(--color-warning);
+    box-shadow:var(--color-warning);
+    color:var(--color-default);
+}
